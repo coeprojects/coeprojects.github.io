@@ -1,6 +1,6 @@
 {
   "name": "spectacle-boilerplate",
-  "homepage": "https://coeprojects.github.io/my-app",
+  "homepage": "https://coeprojects.github.io",
   "version": "1.0.1",
   "description": "React Tableau",
   "main": "lib/index.js",
