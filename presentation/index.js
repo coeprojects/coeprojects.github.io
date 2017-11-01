@@ -97,50 +97,6 @@ export default class Presentation extends React.Component {
         theme={theme}
         bgImage={images.coelogo}>
 
-
-        <Slide transition={["zoom", "slide"]}
-          bgColor="white" textColor="secondary">
-          <Image marginTop="1.5em" width="40%" src={images.coelogo} />
-          {this.renderCOEheader("CoEnterprise")}
-          <Heading size={4} lineHeight={1} textColor="secondary">
-            Core Design Concepts
-            <Image
-              height="1.5em"
-              src={images.tablogo}
-              style={{ marginTop: 0 }}
-            />
-          </Heading>
-
-        </Slide>
-        <Slide
-          transition={["fade"]}
-          bgColor="primary"
-          textColor="secondary"
-        >
-
-
-
-          <Heading size={5} lineHeight={-10} textColor="secondary" textFont="primary" textAlign="top center" style={{ margin: true }} >
-            Three Keys to a Successful Approach
-          </Heading>
-          <List>
-            <Appear>
-              <ListItem margin="0 -200px 0" textColor="secondary">
-                Have a question to answer
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem margin="0 -200px 0" textcolor="secondary">
-                Keep it simple, but not boring
-              </ListItem>
-            </Appear>
-            <Appear>
-              <ListItem margin="0 -200px 0" textColor="secondary">
-                Choose the right chart
-              </ListItem>
-            </Appear>
-          </List>
-        </Slide>
         <Slide transition={["fade"]} bgColor="primary">
           <Heading
             textFont="secondary" size={6} textAlign="top center" textColor="secondary" style={{
@@ -157,26 +113,12 @@ export default class Presentation extends React.Component {
           </Fit>
 
         </Slide>
-                <Slide transition={["fade"]} bgColor="primary">
-         
+        <Slide transition={["fade"]} bgColor="primary">
+
           <Fit>
-            <Dash3/>
+            <Dash3 />
           </Fit>
 
-        </Slide>
-
-        <Slide
-          transition={["fade"]}
-          bgImage={images.back1}
-          bgDarken={0.50}
-          textColor="tertiary"
-        >
-          <Heading size={6} textColor="primary">
-            Chart Types to Avoid
-          </Heading>
-          <Appear>
-            <Tableau url="https://tableau.coenterprise.com/t/DemoSite/views/ehhhhmaybenot/PieCharts?:embed=y&:showAppBanner=false&:showShareOptions=true&:display_count=no&:showVizHome=no" />
-          </Appear>
         </Slide>
         <Slide bgColor="primary">
           <Heading size={6} textColor="secondary">
