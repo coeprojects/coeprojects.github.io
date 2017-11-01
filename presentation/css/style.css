@@ -1,0 +1,18 @@
+#upleft { 
+    width:600px; 
+    height: 600px; 
+    background:whitesmoke; 
+    float:left; 
+ }
+ 
+ #upright { 
+    width:600px; 
+    height:600px; 
+    background:whitesmoke; 
+    float:right
+ }
+ #below { 
+    height:300px; 
+    width:400px; 
+    background:green 
+ }
