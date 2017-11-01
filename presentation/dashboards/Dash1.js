@@ -52,7 +52,7 @@ class TableauTest extends React.Component {
             //this will adjust where the component actually goes
         
             style={{
-                position: "absolute",
+                position: "relative",
                 left: 580,
                 top: -390
             }} />;

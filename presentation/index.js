@@ -1,6 +1,6 @@
 // Import React
 import React, { Component } from 'react';
-import Reveal from "./js/reveal.js";
+import Reveal from "./js/reveal.js"; 
 import Tableau from "tableau-react";
 import Dash1 from "./dashboards/dash1.js";
 import Dash2 from "./dashboards/dash2.js";
@@ -130,6 +130,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide bgColor="quartenary">
+        <formioapp />
         </Slide>
         <Slide bgColor="quartenary">
           <CodePane margin="-100px 0 0" lang="jsx" source={require("raw-loader!../assets/tableau2.example")} />
