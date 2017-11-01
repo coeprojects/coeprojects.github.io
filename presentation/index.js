@@ -5,6 +5,7 @@ import Tableau from "tableau-react";
 import Dash1 from "./dashboards/dash1.js";
 import Dash2 from "./dashboards/dash2.js";
 import Dash3 from "./dashboards/dash3.js";
+import Formio from "./dashboards/formioapp.js";
 //import Zoom from "./plugin/zoom-js/zoom.js";
 import YouTube from 'react-youtube'
 
@@ -110,13 +111,15 @@ export default class Presentation extends React.Component {
             <Dash1 />
 
             <Dash2 />
+            
           </Fit>
 
         </Slide>
+        
         <Slide transition={["fade"]} bgColor="primary">
 
           <Fit>
-            <Dash3 />
+            <Formio />
           </Fit>
 
         </Slide>
