@@ -13,8 +13,8 @@ class TableauTest extends React.Component {
 
         const options = {
             hideTabs: true,
-            width: "1100px",
-            height: "1100px",
+            width: "800px",
+            height: "800px",
             onFirstInteractive: () => {
                 const sheet = viz.getWorkbook().getActiveSheet().getWorksheets().get("Table");
                 const options = {
