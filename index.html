@@ -3,47 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width initial-scale=1 user-scalable=no" />
-    <title>CoEnterprise Tableau</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <title>Weekly Project Status Updates</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">    
     <link rel="stylesheet" type="text/css" href="./presentation/css/style.css">
 
 </head>
-<div class="w3-container w3-teal">
-    <h1>Header</h1>
-  </div>
 
 <body>
-    <div id="upleft">
+    <div class="w3-twothird w3-container">
+        <h2>Indicators</h2>
+        <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+        <script type="text/javascript">
+            function initViz() {
+                var containerDiv = document.getElementById("vizContainer"),
+                    url = "https://tableau.coenterprise.com/t/ProjectManagement/views/projectv2/projectstatus?:embed=y&:showAppBanner=false&:showShareOptions=false&:display_count=no",
+                    options = {
+                        hideTabs: true,
+                        onFirstInteractive: function () {
+                            console.log("Run this code when the viz has finished loading.");
+                        }
+                    };
 
-        <head>
-            <title>Basic Embed</title>
-            
-            <script type="text/javascript" src="https://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
-            <script type="text/javascript">
-                function initViz() {
-                    var containerDiv = document.getElementById("vizContainer"),
-                       url = "https://tableau.coenterprise.com/t/ProjectManagement/views/projectv2/projectstatus?:embed=y&:showAppBanner=false&:showShareOptions=false&:display_count=no",
-                        options = {
-                            hideTabs: true,
-                            onFirstInteractive: function () {
-                                console.log("Run this code when the viz has finished loading.");
-                            }
-                        };
-
-                    // Create a viz object and embed it in the container div.
-                    var viz = new tableau.Viz(containerDiv, url, options); 
-                }
-            </script>
-        </head>
+                // Create a viz object and embed it in the container div.
+                var viz = new tableau.Viz(containerDiv, url, options);
+            }
+        </script>
 
         <body onload="initViz();"></body>
-            <div id="vizContainer" style="width:800px; height:600px;"></div>
-        </body>
     </div>
-    <div id="example"></div>
-</body>
 
+    <div class="w3-third w3-container">
+        <h2>Project Status Form</h2>
+        <div id="example"></div>
+    </div>
+</body>
 
 </html>
