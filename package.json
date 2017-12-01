@@ -66,5 +66,15 @@
     "webpack": "2.2.0",
     "webpack-dev-middleware": "^1.8.4",
     "webpack-hot-middleware": "^2.13.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/coeprojects/coeprojects.github.io.git"
+  },
+  "bugs": {
+    "url": "https://github.com/coeprojects/coeprojects.github.io/issues"
   }
 }
