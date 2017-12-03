@@ -39,8 +39,20 @@
 
 <div class="w3-third w3-container">
     <h2>Project Status Form</h2>
-    <script type="text/javascript">(function a(d, w, u) { var h = d.getElementsByTagName("head")[0]; var s = d.createElement("script"); s.type = "text/javascript"; s.src = "https://portal.form.io/lib/seamless/seamless.parent.min.js"; s.onload = function b() { var f = d.getElementById("formio-form-5983f99a2c612e0007affba9"); if (!f || (typeof w.seamless === u)) { return setTimeout(b, 100); } w.seamless(f, { fallback: false }).receive(function (d, e) { }); }; h.appendChild(s); })(document, window);</script>
-    <iframe id="formio-form-5983f99a2c612e0007affba9" style="width:100%;border:none;" height="600px" src="https://formview.io/#/mrwxlzvtrftdwxy/wps?iframe=1&header=0"></iframe>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
+    <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
+
+    <script type="text/javascript">
+        body.onload = function () {
+            Formio.createForm(document.getElementById('formio'), 'https://mrwxlzvtrftdwxy.form.io/wps');
+        };
+    </script>
+
+    <body>
+        <div id="formio"></div>
+    </body>
+
 </div>
 
 </html>
