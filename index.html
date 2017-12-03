@@ -37,21 +37,18 @@
     </body>
 </div>
 
+
+<h2>Project Status Form</h2>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
+<script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
 <div class="w3-third w3-container">
-    <h2>Project Status Form</h2>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
-    <script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
-
+    <div id="formio"></div>
     <script type="text/javascript">
-        body.onload = function () {
-            Formio.createForm(document.getElementById('formio'), 'https://mrwxlzvtrftdwxy.form.io/wps');
-        };
-    </script>
 
-    <body>
-        <div id="formio"></div>
-    </body>
+        Formio.createForm(document.getElementById('formio'), 'https://mrwxlzvtrftdwxy.form.io/wps');
+
+    </script>
 
 </div>
 
