@@ -13,11 +13,13 @@
       <div class="siteHeader__info">
         <h1>Harvest Report Generator</h1>
         <p>Returns data from Harvest API v2 into the DOM.</p>
-        <p><a href="http://help.getharvest.com/api-v2/">Harvest API Documentation</a></p>
+        <p>
+          <a href="http://help.getharvest.com/api-v2/">Harvest API Documentation</a>
+        </p>
       </div>
 
       <a class="authButton button" href="https://id.getharvest.com/oauth2/authorize?client_id=dNG-07G1DlqbiCVj3bDtHjWV&response_type=token">Authenticate</a>
-    </div>    
+    </div>
   </header>
 
   <section class="app container">
@@ -30,11 +32,9 @@
       </div>
 
       <div class="controls__buttons">
-        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/company">Current Company</button>
-        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/users/me">Current User</button>
-        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/projects.json">Projects</button> 
+        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/projects.json">Projects</button>
         <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/clients.json">Clients</button>
-        
+
       </div>
 
     </section>
@@ -50,4 +50,5 @@
   </section>
 
 </body>
+
 </html>
