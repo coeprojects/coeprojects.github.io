@@ -1,56 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <title>Weekly Project Status Updates</title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/prism/1.3.0/themes/prism-tomorrow.css">
-    <link rel="stylesheet" type="text/css" href="./presentation/css/style.css">
-
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
 </head>
-<script type="text/javascript" src="https://tableau.coenterprise.com/javascripts/api/tableau-2.min.js"></script>
-<script type="text/javascript">
-    function initViz() {
-        var containerDiv = document.getElementById("vizContainer"),
-            url = "https://tableau.coenterprise.com/t/ProjectManagement/views/WeeklyProjectStatusandSummary/summarypage?:embed=y&:showAppBanner=false&:showShareOptions=false&:display_count=no",
-            options = {
-                hideTabs: false,
-                hideToolbar: true,
-                onFirstInteractive: function () {
-                    console.log("Run this code when the viz has finished loading.");
-                }
-            };
 
-        // Create a viz object and embed it in the container div.
-        var viz = new tableau.Viz(containerDiv, url, options);
-    }
-</script>
-<div class="w3-twothird w3-container">
+<body>
 
-    <body onload="initViz();">
+  <header class="siteHeader">
+    <div class="container flex">
+      <div class="siteHeader__info">
+        <h1>Harvest Report Generator</h1>
+        <p>Returns data from Harvest API v2 into the DOM.</p>
+        <p><a href="http://help.getharvest.com/api-v2/">Harvest API Documentation</a></p>
+      </div>
 
-        <div id="vizContainer" style="overflow:auto;"></div>
+      <a class="authButton button" href="https://id.getharvest.com/oauth2/authorize?client_id=dNG-07G1DlqbiCVj3bDtHjWV&response_type=token">Authenticate</a>
+    </div>    
+  </header>
 
-    </body> 
-</div>
+  <section class="app container">
 
+    <section class="app_controls flex">
 
-<h1>Project Status Form</h1>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://unpkg.com/formiojs@latest/dist/formio.full.min.css">
-<script src="https://unpkg.com/formiojs@latest/dist/formio.full.min.js"></script>
-<div class="w3-third w3-container">
-    <div id="formio"></div>
-    <script type="text/javascript">
+      <div class="controls__apiCommand">
+        <input type="text" placeholder="API Command">
+        <button onclick="input()">Submit</button>
+      </div>
 
-        Formio.createForm(document.getElementById('formio'), 'https://mrwxlzvtrftdwxy.form.io/wps');
+      <div class="controls__buttons">
+        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/company">Current Company</button>
+        <button onclick="buttons(this)" class="commandButton" data-command="https://api.harvestapp.com/v2/users/me">Current User</button>
+      </div>
 
-    </script>
-
-</div>
+    </section>
 
 
+    <div class="results">
+      <h2 class="results__title">API Results</h2>
+      <div id="statusContainer">Status: 0</div>
+      <div id="dataContainer"></div>
+    </div>
+
+
+  </section>
+
+</body>
 </html>

@@ -1,0 +1,89 @@
+html, body {
+	font-family:sans-serif;
+	margin:0;
+	padding:0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin-top:0;
+}
+
+p {
+	margin-bottom:0;
+}
+
+input {
+	font-size: .85em;
+    padding: .6em;
+}
+
+
+
+.siteHeader {
+	padding: .5em 1em 1em;
+    background: linear-gradient(#477BA9, #164D92);
+	color: white;
+}
+
+.siteHeader a, .siteHeader a:visited {
+	color:white;
+}
+
+.container {
+	max-width:768px;
+	margin:0 auto;
+}
+
+.flex {
+	display:flex;
+	justify-content: space-between;
+	align-items: flex-start;
+}
+
+.app {
+	padding:1em;
+}
+
+
+.authButton {
+	margin:1em 0;
+}
+
+.results {
+	margin:1em 0;
+	padding:1em;
+	border:1px solid #E3EAE2;
+	background-color: #FCFCFF;
+}
+
+.button, button {
+	position:relative;
+	top:0;
+	display:inline-block;
+	text-decoration:none;
+	color:#FDFEFF;
+	background: linear-gradient(#477BA9, #164D92);
+	padding:.75em;
+	font-weight:700;
+	letter-spacing: 1px;
+	border-radius: .25em;
+	border:1px solid #08498C;
+	margin:.5em 0;
+	cursor: pointer;
+	font-size:.85em;
+}
+
+.button:hover, button:hover {
+	background: linear-gradient(#376790, #114381);
+}
+
+.siteHeader a.button {
+	background: transparent;
+	border: 1px solid #FDFEFF;
+	color:#FDFEFF;
+	transition:all 150ms;
+}
+
+.siteHeader a.button:hover {
+	background: #f47208;
+}

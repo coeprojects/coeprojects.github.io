@@ -17,7 +17,7 @@
         var containerDiv = document.getElementById("vizContainer"),
             url = "https://tableau.coenterprise.com/t/ProjectManagement/views/WeeklyProjectStatusandSummary/summarypage?:embed=y&:showAppBanner=false&:showShareOptions=false&:display_count=no",
             options = {
-                hideTabs: false,
+                hideTabs: true,
                 hideToolbar: true,
                 onFirstInteractive: function () {
                     console.log("Run this code when the viz has finished loading.");
@@ -34,7 +34,7 @@
 
         <div id="vizContainer" style="overflow:auto;"></div>
 
-    </body>
+    </body> 
 </div>
 
 
