@@ -1,31 +1,29 @@
-/* eslint-disable */
+#!/usr/bin/env node
 
-var path = require("path");
-var express = require("express");
-var webpack = require("webpack");
-var config = require("./webpack.config");
+var express = require("express"),
+    app = express(),
+    bodyParser = require('body-parser'),
+    errorHandler = require('errorhandler'),
+    methodOverride = require('method-override'),
+    hostname = process.env.HOSTNAME || 'localhost',
+    port = parseInt(process.env.PORT, 10) || 3070,
+    publicDir = process.argv[2] || __dirname + '/public',
+    path = require('path');
 
-var app = express();
-var compiler = webpack(config);
+app.get("/", function (req, res) {
+  res.sendFile(path.join(publicDir, "/index.html"));
+});
 
-var serverPort = process.env.PORT || 3005;
-
-app.use(require("webpack-dev-middleware")(compiler, {
-  noInfo: true,
-  publicPath: config.output.publicPath
+app.use(methodOverride());
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
+app.use(express.static(publicDir));
+app.use(errorHandler({
+  dumpExceptions: true,
+  showStack: true
 }));
 
-app.use(require("webpack-hot-middleware")(compiler));
-
-app.get("*", function(req, res) {
-  res.sendFile(path.join(__dirname, "index.html"));
-});
-
-app.listen(serverPort, "localhost", function (err) {
-  if (err) {
-    console.log(err);
-    return;
-  }
-
-  console.log("Listening at http://localhost:" + serverPort);
-});
+console.log("Simple static server showing %s listening at http://%s:%s", publicDir, hostname, port);
+app.listen(port, hostname);
